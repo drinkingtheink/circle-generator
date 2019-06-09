@@ -21,7 +21,7 @@ class IlloContainer extends Component {
     let circlesModel = [];
     let i;
     for (i = 0; i < circleCount; i++) { 
-      circlesModel.push({ circle: true, key: `circle-${i++}` })
+      circlesModel.push({ circle: true, key: `circle-${i}` })
     }
     this.setState({ circlesModel: circlesModel })
   }
@@ -46,10 +46,16 @@ class IlloContainer extends Component {
   componentWillMount() {
     this.generateCircleModel();
   }
+  
+  styleMainBg() {
+    return {
+      backgroundColor: `${this.getFill()}`
+    }
+  }
 
   render() {
     return (
-      <main className="illustration-container">
+      <main style={this.styleMainBg()} className="illustration-container">
         <h1>Let's Draw!</h1>
 
         <button className="regenerate" onClick={this.generateCircleModel}>REGENERATE</button>
