@@ -4,6 +4,7 @@ import palettes from '../palettes';
 
 const maxCircles = 50;
 const minCircles = 15;
+const invisibleCircle = 'rgba(124,240,10,0)';
 
 class IlloContainer extends Component {
   constructor(props) {
@@ -43,6 +44,11 @@ class IlloContainer extends Component {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  getRandomBool() {
+    let randomBoolean = Math.random() >= 0.5;
+    return randomBoolean;
+  }
+
   componentWillMount() {
     this.generateCircleModel();
   }
@@ -54,6 +60,8 @@ class IlloContainer extends Component {
   }
 
   render() {
+    let strokeNotFill = this.getRandomBool();
+
     return (
       <main style={this.styleMainBg()} className="illustration-container">
         <h1>Let's Draw!</h1>
@@ -67,8 +75,10 @@ class IlloContainer extends Component {
             opacity={`.${this.getRandomInt(1, 9)}`} 
             width={`${this.getRandomInt(30, 800)}px`} 
             zIndex={`${this.getRandomInt(1, 10)}`} 
-            fill={this.getFill()}
+            fill={strokeNotFill ? invisibleCircle : `${this.getFill()}`}
             key={circle.key}
+            stroke={strokeNotFill ? `${this.getFill()}` : null}
+            strokeWidth={strokeNotFill ? `${this.getRandomInt(2, 30)}em` : null}
           />
         ))}
         

@@ -8,7 +8,9 @@ const CircleSVG = (props) => {
     zIndex: props.z_index,
     opacity: props.opacity,
     right: props.right,
-    top: props.top
+    top: props.top,
+    stroke: props.stroke,
+    strokeWidth: props.strokeWidth
   }
 
   return (
@@ -31,7 +33,9 @@ CircleSVG.propTypes = {
   opacity: PropTypes.string,
   right: PropTypes.string,
   top: PropTypes.string,
-  fill: PropTypes.string
+  fill: PropTypes.string,
+  stroke: PropTypes.string,
+  strokeWidth: PropTypes.string
 };
 
 export default CircleSVG;
