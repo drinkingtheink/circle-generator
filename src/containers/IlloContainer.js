@@ -3,7 +3,7 @@ import CircleSVG from '../components/CircleSVG';
 import palettes from '../palettes';
 
 const maxCircles = 100;
-const minCircles = 1;
+const minCircles = 10;
 const invisibleCircle = 'rgba(124,240,10,0)';
 
 class IlloContainer extends Component {
