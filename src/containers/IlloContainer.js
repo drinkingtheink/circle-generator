@@ -76,7 +76,7 @@ class IlloContainer extends Component {
             fill={this.getRandomBool() ? invisibleCircle : `${this.getFill()}`}
             key={circle.key}
             stroke={this.getRandomBool() ? `${this.getFill()}` : null}
-            strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 30)}` : null}
+            strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 80)}` : null}
           />
         ))}
         
