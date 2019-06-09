@@ -60,9 +60,6 @@ class IlloContainer extends Component {
   }
 
   render() {
-    let showStroke = this.getRandomBool();
-    let showFill = this.getRandomBool();
-
     return (
       <main style={this.styleMainBg()} className="illustration-container">
         <h1>Let's Draw!</h1>
@@ -76,10 +73,10 @@ class IlloContainer extends Component {
             opacity={`.${this.getRandomInt(1, 9)}`} 
             width={`${this.getRandomInt(30, 800)}px`} 
             zIndex={`${this.getRandomInt(1, 10)}`} 
-            fill={showStroke ? invisibleCircle : `${this.getFill()}`}
+            fill={this.getRandomBool() ? invisibleCircle : `${this.getFill()}`}
             key={circle.key}
-            stroke={showFill ? `${this.getFill()}` : null}
-            strokeWidth={showFill ? `${this.getRandomInt(2, 30)}` : null}
+            stroke={this.getRandomBool() ? `${this.getFill()}` : null}
+            strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 30)}` : null}
           />
         ))}
         
