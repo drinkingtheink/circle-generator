@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import CircleSVG from '../components/CircleSVG';
 import palettes from '../palettes';
 
-const maxCircles = 50;
-const minCircles = 15;
+const maxCircles = 100;
+const minCircles = 1;
 const invisibleCircle = 'rgba(124,240,10,0)';
 
 class IlloContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      circleCount: null,
       circlesModel: null,
       currentPalette: null
     }
@@ -24,7 +25,7 @@ class IlloContainer extends Component {
     for (i = 0; i < circleCount; i++) { 
       circlesModel.push({ circle: true, key: `circle-${i}` })
     }
-    this.setState({ circlesModel: circlesModel })
+    this.setState({ circlesModel: circlesModel, circleCount: circleCount })
   }
 
   getPalette() {
@@ -63,6 +64,7 @@ class IlloContainer extends Component {
     return (
       <main style={this.styleMainBg()} className="illustration-container">
         <h1>Let's Draw!</h1>
+        <h2>Circle Count: {this.state.circleCount}</h2>
 
         <button className="regenerate" onClick={this.generateCircleModel}>REGENERATE</button>
 
