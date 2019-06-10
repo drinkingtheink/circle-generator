@@ -1,16 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 html, 
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   overflow: hidden;
-}
-
-button {
-  padding: 1rem 1.5rem;
-  text-transform: uppercase;
 }
 
 .App {
@@ -18,7 +16,23 @@ button {
   text-align: center;
 }
 
+.arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    display: inline-block;
+    width: 0;    
+    height: 0;
+    border-left: 15rem solid transparent;
+    border-right: 15rem solid transparent;
+    border-top: 12rem solid rgba(black, .5);
+    z-index: 2;
+  }
+
 .illustration-container {
+  position: relative;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23333333' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   height: 100vh;
   width: 100vw;
@@ -27,7 +41,18 @@ button {
 
 .illustration-header {
   position: relative;
-  z-index: 100;
+  z-index: 10;
+
+  h1,
+  h2 {
+    color: white;
+    margin: .25rem 0;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 .regenerate {
@@ -56,5 +81,19 @@ h5 {
 @keyframes dash {
   to {
     stroke-dashoffset: 500;
+  }
+}
+
+// forms
+
+button {
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  border-radius: 4px;
+  margin-top: .25rem;
+
+  &:hover {
+    cursor: pointer;
   }
 }

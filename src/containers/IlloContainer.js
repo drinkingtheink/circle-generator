@@ -63,11 +63,12 @@ class IlloContainer extends Component {
   render() {
     return (
       <main style={this.styleMainBg()} className="illustration-container">
-        <header className="illustration-header">
-          <h1>Let's Draw!</h1>
-          <h2>Circle Count: {this.state.circleCount}</h2>
+        <span className="arrow" />
 
-          <button className="regenerate" onClick={this.generateCircleModel}>REGENERATE</button>
+        <header className="illustration-header">
+          <h1>The Circler</h1>
+          <h2>Circles Drawn: {this.state.circleCount}</h2>
+          <button className="regenerate" onClick={this.generateCircleModel}>Redraw</button>
         </header>
 
         {this.state.circlesModel.map((circle, index) => (
