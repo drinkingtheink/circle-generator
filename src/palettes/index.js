@@ -110,6 +110,30 @@ const palettes = [
     '#2ba84a',
     '#2d3a3a',
     '#fcfffc'
+  ],
+  [
+    // https://coolors.co/1a535c-4ecdc4-f7fff7-ff6b6b-ffe66d
+    '#1a535c',
+    '#4ecdc4',
+    '#f7fff7',
+    '#ff6b6b',
+    '#ffe66d'
+  ],
+  [
+    // https://coolors.co/05668d-427aa1-ebf2fa-679436-a5be00
+    '#05668d',
+    '#427aa1',
+    '#ebf2fa',
+    '#679436',
+    '#a5be00'
+  ],
+  [
+    // https://coolors.co/000000-5d737e-fff07c-f0f7ee-87bba2
+    '#000000',
+    '#5d737e',
+    '#fff07c',
+    '#f0f7ee',
+    '#87bba2'
   ]
 ]
 
