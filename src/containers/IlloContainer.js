@@ -81,7 +81,7 @@ class IlloContainer extends Component {
             key={circle.key}
             stroke={this.getRandomBool() ? `${this.getFill()}` : null}
             strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 100)}` : null}
-            strokeDasharray={this.getRandomBool() ? `${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}` : null}
+            strokeDasharray={this.getRandomBool() ? `${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}` : null}
           />
         ))}
         
