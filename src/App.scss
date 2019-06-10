@@ -143,5 +143,15 @@ button {
 
   input {
     font-size: 1.25rem;
+    padding: .25rem;
+    background: rgba(black, .25);
+    color: white;
+    border: none;
+    max-width: 70%;
+
+    &:focus {
+      background: white;
+      color: #333;
+    }
   }
 }
