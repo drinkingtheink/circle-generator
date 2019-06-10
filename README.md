@@ -11,6 +11,7 @@
 ### Roadmap
 
 * Allow user to control range of circles in a circlescape
+* Generate new circlescapes using keys
 * Allow custom color palettes
 * Export circlescapes as SVGs
 
