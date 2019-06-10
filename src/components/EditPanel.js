@@ -9,7 +9,6 @@ class EditPanel extends Component {
   }
 
   handleMinCirclesChange(e) {
-    let newCount = e.target.value || this.props.maxCircles;
     this.props.updateMinCirclesCount(e.target.value);
   }
 

@@ -21,6 +21,9 @@ class IlloContainer extends Component {
     this.updateMinCirclesCount = this.updateMinCirclesCount.bind(this);
   }
 
+  // for use with slideshow mode
+  intervalID = 0;
+
   generateCircleModel() {
     this.getPalette();
     let circleCount = this.getRandomInt(this.state.minCircles, this.state.maxCircles);
@@ -30,6 +33,10 @@ class IlloContainer extends Component {
       circlesModel.push({ circle: true, key: `circle-${i}` })
     }
     this.setState({ circlesModel: circlesModel, circleCount: circleCount })
+
+    if (this.state.slideshow) {
+      this.rebootSlideshow();
+    }
   }
 
   getPalette() {
@@ -64,17 +71,25 @@ class IlloContainer extends Component {
     this.generateCircleModel();
   }
 
-  componentWillMount() {
-    this.generateCircleModel();
+  rebootSlideshow() {
+    this.endSlideshow();
+    this.startSlideshow();
   }
 
-  componentDidMount() {
-    if (this.state.slideshow) {
-      let react = this;
-      setInterval(function() {
-          react.generateCircleModel()
-      }, 20 * 1000);
-    }
+  startSlideshow() {
+    let react = this;
+    this.intervalID = setInterval(function() {
+        react.generateCircleModel()
+    }, 10 * 1000);
+  }
+
+  endSlideshow() {
+    clearInterval(this.intervalID);
+  }
+
+  // Lifecycles
+  componentWillMount() {
+    this.generateCircleModel();
   }
   
   styleMainBg() {
