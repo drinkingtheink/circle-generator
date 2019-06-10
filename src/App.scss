@@ -118,6 +118,12 @@ button {
 
 // edit panel
 
+@media only screen and (max-width: 600px) {
+  .edit-panel {
+    display: none;
+  }
+}
+
 .edit-panel {
   position: absolute;
   left: 0;
