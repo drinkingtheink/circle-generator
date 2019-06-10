@@ -8,6 +8,12 @@
 
 ### [Create some for yourself.](http://circler.surge.sh/)
 
+### Roadmap
+
+* Allow user to control range of circles in a circlescape
+* Allow custom color palettes
+* Export circlescapes as SVGs
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
