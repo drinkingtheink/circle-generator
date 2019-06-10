@@ -1,3 +1,11 @@
+# Circler - Generative Art Using SVGs
+
+[Circler in Action](https://gdurl.com/lalh)
+
+## Generative Art
+
+#### The Circler creates random sets of circles (SVGs) that are displayed in a variety of different ways to create new visual landscapes.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
