@@ -63,22 +63,25 @@ class IlloContainer extends Component {
   render() {
     return (
       <main style={this.styleMainBg()} className="illustration-container">
-        <h1>Let's Draw!</h1>
-        <h2>Circle Count: {this.state.circleCount}</h2>
+        <header className="illustrator-header">
+          <h1>Let's Draw!</h1>
+          <h2>Circle Count: {this.state.circleCount}</h2>
 
-        <button className="regenerate" onClick={this.generateCircleModel}>REGENERATE</button>
+          <button className="regenerate" onClick={this.generateCircleModel}>REGENERATE</button>
+        </header>
 
         {this.state.circlesModel.map((circle, index) => (
           <CircleSVG 
             top={`${this.getRandomInt(-100, 100)}%`} 
             right={`${this.getRandomInt(-100, 100)}%`} 
             opacity={`.${this.getRandomInt(1, 9)}`} 
-            width={`${this.getRandomInt(30, 800)}px`} 
+            width={`${this.getRandomInt(15, 800)}px`} 
             zIndex={`${this.getRandomInt(1, 10)}`} 
             fill={this.getRandomBool() ? invisibleCircle : `${this.getFill()}`}
             key={circle.key}
             stroke={this.getRandomBool() ? `${this.getFill()}` : null}
-            strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 80)}` : null}
+            strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 100)}` : null}
+            strokeDasharray={this.getRandomBool() ? `${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}` : null}
           />
         ))}
         

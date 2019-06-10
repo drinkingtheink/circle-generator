@@ -25,6 +25,11 @@ button {
   overflow: hidden;
 }
 
+.illustrator-header {
+  position: relative;
+  z-index: 100;
+}
+
 .regenerate {
   z-index: 11;
   position: relative;
