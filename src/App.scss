@@ -17,6 +17,7 @@ body {
 }
 
 $arroDim: 10rem;
+$blackOpBg: rgba(black, .5);
 
 .arrow {
     position: absolute;
@@ -29,7 +30,7 @@ $arroDim: 10rem;
     height: 0;
     border-left: $arroDim solid transparent;
     border-right: $arroDim solid transparent;
-    border-top: $arroDim solid rgba(black, .5);
+    border-top: $arroDim solid $blackOpBg;
     z-index: 2;
   }
 
@@ -112,5 +113,25 @@ button {
   &:hover {
     cursor: pointer;
     opacity: 1;
+  }
+}
+
+// edit panel
+
+.edit-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 1rem;
+  z-index: 11;
+  text-align: center;
+  
+  main {
+    background-color: $blackOpBg;
+    padding: 1rem;
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 4px;
   }
 }

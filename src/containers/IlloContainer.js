@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CircleSVG from '../components/CircleSVG';
+import EditPanel from '../components/EditPanel';
 import palettes from '../palettes';
 
 const maxCircles = 100;
@@ -90,6 +91,7 @@ class IlloContainer extends Component {
           />
         ))}
         
+        <EditPanel />
       </main>     
     )
   }
