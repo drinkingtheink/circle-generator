@@ -4,7 +4,7 @@ import palettes from '../palettes';
 
 const maxCircles = 100;
 const minCircles = 10;
-const invisibleCircle = 'rgba(124,240,10,0)';
+const invisibleCircle = 'rgba(000,000,000,0)';
 
 class IlloContainer extends Component {
   constructor(props) {
