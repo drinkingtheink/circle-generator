@@ -16,6 +16,8 @@ body {
   text-align: center;
 }
 
+$arroDim: 10rem;
+
 .arrow {
     position: absolute;
     left: 0;
@@ -25,9 +27,9 @@ body {
     display: inline-block;
     width: 0;    
     height: 0;
-    border-left: 15rem solid transparent;
-    border-right: 15rem solid transparent;
-    border-top: 12rem solid rgba(black, .5);
+    border-left: $arroDim solid transparent;
+    border-right: $arroDim solid transparent;
+    border-top: $arroDim solid rgba(black, .5);
     z-index: 2;
   }
 
