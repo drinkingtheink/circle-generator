@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import CircleSVG from '../components/CircleSVG';
+import EditPanel from '../components/EditPanel';
 import palettes from '../palettes';
 
-const maxCircles = 100;
-const minCircles = 10;
 const invisibleCircle = 'rgba(000,000,000,0)';
 
 class IlloContainer extends Component {
@@ -13,14 +12,18 @@ class IlloContainer extends Component {
       circleCount: null,
       circlesModel: null,
       currentPalette: null,
-      slideshow: true
+      slideshow: true,
+      maxCircles: 100,
+      minCircles: 10
     }
     this.generateCircleModel = this.generateCircleModel.bind(this);
+    this.updateMaxCirclesCount = this.updateMaxCirclesCount.bind(this);
+    this.updateMinCirclesCount = this.updateMinCirclesCount.bind(this);
   }
 
   generateCircleModel() {
     this.getPalette();
-    let circleCount = this.getRandomInt(minCircles, maxCircles);
+    let circleCount = this.getRandomInt(this.state.minCircles, this.state.maxCircles);
     let circlesModel = [];
     let i;
     for (i = 0; i < circleCount; i++) { 
@@ -51,6 +54,17 @@ class IlloContainer extends Component {
     return randomBoolean;
   }
 
+  updateMaxCirclesCount(newCount) {
+    console.log(`WHAT DO WE HAVE>>> ${newCount}`);
+    this.setState({ maxCircles: newCount });
+    this.generateCircleModel();
+  }
+
+  updateMinCirclesCount(newCount) {
+    this.setState({ minCircles: newCount });
+    this.generateCircleModel();
+  }
+
   componentWillMount() {
     this.generateCircleModel();
   }
@@ -61,6 +75,8 @@ class IlloContainer extends Component {
       setInterval(function() {
           react.generateCircleModel()
       }, 20 * 1000);
+    } else {
+      
     }
   }
   
@@ -100,6 +116,12 @@ class IlloContainer extends Component {
           />
         ))}
         
+        <EditPanel 
+          minCircles={this.state.minCircles} 
+          updateMinCirclesCount={this.updateMinCirclesCount}
+          maxCircles={this.state.maxCircles} 
+          updateMaxCirclesCount={this.updateMaxCirclesCount}
+        />
       </main>     
     )
   }
