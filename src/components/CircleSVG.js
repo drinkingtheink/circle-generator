@@ -6,12 +6,16 @@ const CircleSVG = (props) => {
     position: 'absolute',
     width: props.width,
     zIndex: props.z_index,
+    fill: props.fill,
     opacity: props.opacity,
     right: props.right,
     top: props.top,
     stroke: props.stroke,
     strokeWidth: props.strokeWidth,
-    strokeDasharray: props.strokeDasharray
+    strokeDasharray: props.strokeDasharray,
+    animationName: 'dash',
+    animationDuration: props.animationDuration,
+    animationDelay: props.animationDelay
   }
 
   return (
@@ -22,7 +26,6 @@ const CircleSVG = (props) => {
     >
       <path 
         className="circle-svg-path" 
-        fill={ props.fill }
         d="M300,550A250,250,0,0,1,123.22,123.22,250,250,0,1,1,476.78,476.78,248.36,248.36,0,0,1,300,550Z"/>
     </svg>
   )
@@ -37,7 +40,9 @@ CircleSVG.propTypes = {
   fill: PropTypes.string,
   stroke: PropTypes.string,
   strokeWidth: PropTypes.string,
-  strokeDasharray: PropTypes.string
+  strokeDasharray: PropTypes.string,
+  animationDuration: PropTypes.string,
+  animationDelay: PropTypes.string
 };
 
 export default CircleSVG;

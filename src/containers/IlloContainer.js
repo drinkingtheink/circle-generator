@@ -63,7 +63,7 @@ class IlloContainer extends Component {
   render() {
     return (
       <main style={this.styleMainBg()} className="illustration-container">
-        <header className="illustrator-header">
+        <header className="illustration-header">
           <h1>Let's Draw!</h1>
           <h2>Circle Count: {this.state.circleCount}</h2>
 
@@ -82,6 +82,8 @@ class IlloContainer extends Component {
             stroke={this.getRandomBool() ? `${this.getFill()}` : null}
             strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 100)}` : null}
             strokeDasharray={this.getRandomBool() ? `${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}` : null}
+            animationDuration={`${this.getRandomInt(1, 8)}s`}
+            animationDelay={`.${this.getRandomInt(1, 3)}s`}
           />
         ))}
         
