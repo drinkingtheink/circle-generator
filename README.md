@@ -8,6 +8,12 @@
 
 ### [Create some for yourself.](http://circler.surge.sh/)
 
+### Notes About the Generated Circles:
+* They could be of any opacity (so some may be invisible)
+* They can have a fill, a stroke, or both
+* The stroke is also variable, as is stroke-width and stroke-dasharray
+* Animation delays and durations are also variable
+
 ### Roadmap
 
 * Generate new circlescapes using arrow keys
