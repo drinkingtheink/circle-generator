@@ -55,7 +55,6 @@ class IlloContainer extends Component {
   }
 
   updateMaxCirclesCount(newCount) {
-    console.log(`WHAT DO WE HAVE>>> ${newCount}`);
     this.setState({ maxCircles: newCount });
     this.generateCircleModel();
   }
@@ -75,8 +74,6 @@ class IlloContainer extends Component {
       setInterval(function() {
           react.generateCircleModel()
       }, 20 * 1000);
-    } else {
-      
     }
   }
   
