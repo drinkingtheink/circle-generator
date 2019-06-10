@@ -1,6 +1,6 @@
 # Circler - Generative Art Using SVGs
 
-![Circler in Action](https://gdurl.com/lalh)
+![Circler in Action](https://gdurl.com/SMUO)
 
 ## Generative Art
 
