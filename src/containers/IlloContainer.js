@@ -30,7 +30,7 @@ class IlloContainer extends Component {
     let circlesModel = [];
     let i;
     for (i = 0; i < circleCount; i++) { 
-      circlesModel.push({ circle: true, key: `circle-${i}` })
+      circlesModel.push({ circle: true, key: `circle-${this.getRandomString()}` })
     }
     this.setState({ circlesModel: circlesModel, circleCount: circleCount })
 
@@ -59,6 +59,10 @@ class IlloContainer extends Component {
   getRandomBool() {
     let randomBoolean = Math.random() >= 0.5;
     return randomBoolean;
+  }
+
+  getRandomString() {
+    return Math.random().toString(20).substring(2, 15) + Math.random().toString(20).substring(2, 15);
   }
 
   updateMaxCirclesCount(newCount) {
