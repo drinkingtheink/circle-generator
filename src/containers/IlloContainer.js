@@ -60,7 +60,7 @@ class IlloContainer extends Component {
       let react = this;
       setInterval(function() {
           react.generateCircleModel()
-      }, 10 * 1000);
+      }, 20 * 1000);
     }
   }
   
