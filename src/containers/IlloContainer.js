@@ -13,7 +13,8 @@ class IlloContainer extends Component {
     this.state = {
       circleCount: null,
       circlesModel: null,
-      currentPalette: null
+      currentPalette: null,
+      slideshow: true
     }
     this.generateCircleModel = this.generateCircleModel.bind(this);
   }
@@ -54,6 +55,15 @@ class IlloContainer extends Component {
   componentWillMount() {
     this.generateCircleModel();
   }
+
+  componentDidMount() {
+    if (this.state.slideshow) {
+      let react = this;
+      setInterval(function() {
+          react.generateCircleModel()
+      }, 20 * 1000);
+    }
+  }
   
   styleMainBg() {
     return {
@@ -74,8 +84,8 @@ class IlloContainer extends Component {
 
         {this.state.circlesModel.map((circle, index) => (
           <CircleSVG 
-            top={`${this.getRandomInt(-100, 100)}%`} 
-            right={`${this.getRandomInt(-100, 100)}%`} 
+            top={`${this.getRandomInt(-80, 80)}%`} 
+            right={`${this.getRandomInt(-80, 80)}%`} 
             opacity={`.${this.getRandomInt(1, 9)}`} 
             width={`${this.getRandomInt(15, 800)}px`} 
             zIndex={`${this.getRandomInt(1, 10)}`} 
@@ -84,8 +94,8 @@ class IlloContainer extends Component {
             stroke={this.getRandomBool() ? `${this.getFill()}` : null}
             strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 100)}` : null}
             strokeDasharray={this.getRandomBool() ? `${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}` : null}
-            animationDuration={`${this.getRandomInt(1, 8)}s`}
-            animationDelay={`.${this.getRandomInt(1, 3)}s`}
+            animationDuration={`${this.getRandomInt(3, 20)}s`}
+            animationDelay={`.${this.getRandomInt(3, 5)}s`}
             displayAnimationDuration={`.${this.getRandomInt(5, 9)}s`}
             displayAnimationDelay={`.${this.getRandomInt(3, 9)}s`}
           />
