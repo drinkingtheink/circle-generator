@@ -67,7 +67,7 @@ class IlloContainer extends Component {
 
         <header className="illustration-header">
           <h1>The Circler</h1>
-          <h2>Circles Drawn: {this.state.circleCount}</h2>
+          <h2>{this.state.circleCount} Circles</h2>
           <button className="regenerate" onClick={this.generateCircleModel}>Redraw</button>
         </header>
 
