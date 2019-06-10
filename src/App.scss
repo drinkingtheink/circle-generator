@@ -128,10 +128,20 @@ button {
   text-align: center;
   
   main {
-    background-color: $blackOpBg;
-    padding: 1rem;
-    width: 65%;
-    margin: 0 auto;
-    border-radius: 4px;
+    display: flex;
+    width: auto;
+    justify-content: center;
+
+    section {
+      background-color: $blackOpBg;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-right: .5rem;
+      color: white;
+    }
+  }
+
+  input {
+    font-size: 1.25rem;
   }
 }
