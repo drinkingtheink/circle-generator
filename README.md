@@ -1,10 +1,12 @@
 # Circler - Generative Art Using SVGs
 
-![Circler in Action](https://gdurl.com/SMUO)
+![Circler in Action](https://gdurl.com/Z8uc)
 
 ## Generative Art
 
 ### The Circler creates random sets of circles (SVGs) or "circlescapes" that are displayed in a variety of different ways to create new visual landscapes.
+
+#### You can also adjust the circle range to include more or fewer circles in your circlescapes. How many can your browser render at once? Don't get dizzy.
 
 ### [Create some for yourself.](http://circler.surge.sh/)
 
