@@ -111,7 +111,7 @@ class IlloContainer extends Component {
 
         <header className="illustration-header">
           <section className="about">
-            <a href={this.state.repoLink} className="about-link" target="_blank"  rel="noopener noreferrer">About this Project</a> | 
+            <a href={this.state.repoLink} className="about-link" target="_blank"  rel="noopener noreferrer">About this Project</a>
             <a href={this.state.portfolioLink} className="about-link" target="_blank"  rel="noopener noreferrer">About the Author</a>
           </section>
           <h1>The Circler</h1>
