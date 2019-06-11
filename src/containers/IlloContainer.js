@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CircleSVG from '../components/CircleSVG';
 import EditPanel from '../components/EditPanel';
 import palettes from '../palettes';
+import CountUp from 'react-countup';
 
 const invisibleCircle = 'rgba(000,000,000,0)';
 
@@ -115,7 +116,7 @@ class IlloContainer extends Component {
             <a href={this.state.portfolioLink} className="about-link" target="_blank"  rel="noopener noreferrer">About the Author</a>
           </section>
           <h1 className="app-title">The Circler</h1>
-          <h2>{this.state.circleCount} Circles</h2>
+          <h2><CountUp start={0} end={this.state.circleCount} duration={1.5}>{this.state.circleCount}</CountUp> Circles</h2>
           <button className="regenerate" onClick={this.generateCircleModel}>Redraw</button>
         </header>
 
