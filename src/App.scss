@@ -43,6 +43,10 @@ $blackOpBg: rgba(black, .5);
   transition: all .3s linear;
 }
 
+.app-title {
+  text-shadow: black 1px 0 10px;
+}
+
 .illustration-header {
   position: relative;
   z-index: 10;

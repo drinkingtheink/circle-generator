@@ -114,7 +114,7 @@ class IlloContainer extends Component {
             <a href={this.state.repoLink} className="about-link" target="_blank"  rel="noopener noreferrer">About this Project</a>
             <a href={this.state.portfolioLink} className="about-link" target="_blank"  rel="noopener noreferrer">About the Author</a>
           </section>
-          <h1>The Circler</h1>
+          <h1 className="app-title">The Circler</h1>
           <h2>{this.state.circleCount} Circles</h2>
           <button className="regenerate" onClick={this.generateCircleModel}>Redraw</button>
         </header>
