@@ -133,8 +133,8 @@ class IlloContainer extends Component {
             strokeWidth={this.getRandomBool() ? `${this.getRandomInt(2, 100)}` : null}
             strokeDasharray={this.getRandomBool() ? `${this.getRandomInt(0, 15)}, ${this.getRandomInt(0, 15)}` : null}
             animationDuration={`${this.getRandomInt(3, 20)}s`}
-            animationDelay={`.${this.getRandomInt(3, 5)}s`}
-            displayAnimationDuration={`.${this.getRandomInt(5, 9)}s`}
+            animationDelay={`.${this.getRandomInt(3, 9)}s`}
+            displayAnimationDuration={`${this.getRandomInt(3, 9)}s`}
             displayAnimationDelay={`.${this.getRandomInt(3, 9)}s`}
           />
         ))}

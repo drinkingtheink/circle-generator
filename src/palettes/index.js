@@ -134,6 +134,54 @@ const palettes = [
     '#fff07c',
     '#f0f7ee',
     '#87bba2'
+  ],
+  [
+    // https://coolors.co/app/00467f-00072d-008ecd-a6e1fa-00072d
+    '#00467f',
+    '#00072d',
+    '#008ecd',
+    '#a6e1fa',
+    '#00072d'
+  ],
+  [
+    // https://coolors.co/app/fff75a-fffd98-8693ab-96adc8-c4cad0
+    '#fff75a',
+    '#fffd98',
+    '#8693ab',
+    '#96adc8',
+    '#c4cad0'
+  ],
+  [
+    // https://coolors.co/app/447604-85cb33-9ffcdf-52ad9c-3c1b43
+    '#447604',
+    '#85cb33',
+    '#9ffcdf',
+    '#52ad9c',
+    '#3c1b43'
+  ],
+  [
+    // https://coolors.co/app/215a72-3e95ad-f5ee9e-f49e4c-ab3428
+    '#215a72',
+    '#3e95ad',
+    '#f5ee9e',
+    '#f49e4c',
+    '#ab3428'
+  ],
+  [
+    // https://coolors.co/app/a8f9ff-ffffff-56cbf9-ffe74c-ff729f
+    '#a8f9ff',
+    '#ffffff',
+    '#56cbf9',
+    '#ffe74c',
+    '#ff729f'
+  ],
+  [
+    // https://coolors.co/app/f2dd6e-f2a359-e5b25d-b87d4b-523a34
+    '#f2dd6e',
+    '#f2a359',
+    '#e5b25d',
+    '#b87d4b',
+    '#523a34'
   ]
 ]
 
