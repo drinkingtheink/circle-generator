@@ -116,6 +116,23 @@ button {
   }
 }
 
+// about
+  .about {
+    background-color: rgba(black, .5);
+    padding: .25rem;
+
+    .about-link {
+      font-size: .8rem !important;
+      text-decoration: none !important;
+      color: white !important;
+      margin-right: .5rem;
+
+      &:hover {
+        color: yellow !important;
+      }
+    }
+  }
+
 // edit panel
 
 @media only screen and (max-width: 600px) {

@@ -14,7 +14,9 @@ class IlloContainer extends Component {
       currentPalette: null,
       slideshow: true,
       maxCircles: 100,
-      minCircles: 10
+      minCircles: 10,
+      repoLink: 'https://github.com/drinkingtheink/circle-generator',
+      portfolioLink: 'http://drinkingtheink.github.io'
     }
     this.generateCircleModel = this.generateCircleModel.bind(this);
     this.updateMaxCirclesCount = this.updateMaxCirclesCount.bind(this);
@@ -108,6 +110,10 @@ class IlloContainer extends Component {
         <span className="arrow" />
 
         <header className="illustration-header">
+          <section className="about">
+            <a href={this.state.repoLink} className="about-link" target="_blank"  rel="noopener noreferrer">About this Project</a> | 
+            <a href={this.state.portfolioLink} className="about-link" target="_blank"  rel="noopener noreferrer">About the Author</a>
+          </section>
           <h1>The Circler</h1>
           <h2>{this.state.circleCount} Circles</h2>
           <button className="regenerate" onClick={this.generateCircleModel}>Redraw</button>
