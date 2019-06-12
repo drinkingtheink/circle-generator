@@ -14,8 +14,8 @@ class IlloContainer extends Component {
       circlesModel: null,
       currentPalette: null,
       slideshow: true,
-      maxCircles: 100,
-      minCircles: 10,
+      maxCircles: 75,
+      minCircles: 25,
       repoLink: 'https://github.com/drinkingtheink/circle-generator',
       portfolioLink: 'http://drinkingtheink.github.io'
     }
@@ -116,7 +116,7 @@ class IlloContainer extends Component {
             <a href={this.state.portfolioLink} className="about-link" target="_blank"  rel="noopener noreferrer">About the Author</a>
           </section>
           <h1 className="app-title">The Circler</h1>
-          <h2><CountUp start={0} end={this.state.circleCount} duration={1.5}>{this.state.circleCount}</CountUp> Circles</h2>
+          <h2><CountUp start={this.state.minCircles} end={this.state.circleCount} duration={1.5}>{this.state.circleCount}</CountUp> Circles</h2>
           <button className="regenerate" onClick={this.generateCircleModel}>Redraw</button>
         </header>
 
