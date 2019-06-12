@@ -11,7 +11,7 @@ class EditPanel extends Component {
   }
 
   onChange(updateMin, event) {
-    this.debouncedOnChange(event.target.value); 
+    this.debouncedOnChange(event.target.value, updateMin); 
   }
 
   debouncedOnChange(newNumber, updateMin) {
