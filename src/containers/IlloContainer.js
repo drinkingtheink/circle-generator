@@ -69,11 +69,17 @@ class IlloContainer extends Component {
   }
 
   updateMaxCirclesCount(newCount) {
+    if (typeof newCount !== 'number'){
+      newCount = Number(newCount);
+    }
     this.setState({ maxCircles: newCount });
     this.generateCircleModel();
   }
 
   updateMinCirclesCount(newCount) {
+    if (typeof newCount !== 'number'){
+      newCount = Number(newCount);
+    }
     this.setState({ minCircles: newCount });
     this.generateCircleModel();
   }
