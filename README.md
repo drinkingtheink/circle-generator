@@ -18,6 +18,9 @@
 * The stroke is also variable, as is stroke-width and stroke-dasharray
 * Animation delays and durations are also variable
 
+## Works Well on Long Screens As Well
+![Circler in Action on Long Screens](https://gdurl.com/RteF)
+
 ### Roadmap
 
 * Generate new circlescapes using arrow keys
