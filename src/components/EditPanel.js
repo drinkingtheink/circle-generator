@@ -14,11 +14,13 @@ class EditPanel extends Component {
     this.debouncedOnChange(event.target.value, updateMin); 
   }
 
-  debouncedOnChange(newNumber, updateMin) {
-    if (updateMin) {
-      this.handleMinCirclesChange(newNumber);
-    } else {
+  debouncedOnChange(newNumber, target) {
+    if (target === 'minCircles') {
+      this.handleMifinCirclesChange(newNumber);
+    } else  if (target === 'minCircles') {
       this.handleMaxCirclesChange(newNumber);
+    } else {
+      this.handleSlideshowDurationChange(newNumber);
     }
   }
 
@@ -28,6 +30,10 @@ class EditPanel extends Component {
 
   handleMaxCirclesChange(newNumber) {
     this.props.updateMaxCirclesCount(newNumber);
+  }
+
+  handleSlideshowDurationChange(newNumber) {
+    this.props.updateSlideshowDuration(newNumber);
   }
 
   render () {
@@ -50,6 +56,15 @@ class EditPanel extends Component {
               defaultValue={this.props.maxCircles}
              />
           </section>
+          <section className="slideshow-duration">
+            <h3>Scene Duration:</h3>
+            <input
+              onChange={(e) => this.onChange(false, e)}
+              type="number"
+              defaultValue={this.props.slideshowDuration}
+             />
+              sec
+          </section>
         </main>
       </section>
     )
@@ -60,7 +75,8 @@ EditPanel.propTypes = {
   minCircles: PropTypes.number,
   updateMinCirclesCount: PropTypes.func,
   maxCircles: PropTypes.number,
-  updateMaxCirclesCount: PropTypes.func 
+  updateMaxCirclesCount: PropTypes.func,
+  sceneDuration: PropTypes.number 
 };
 
 export default EditPanel;

@@ -14,6 +14,7 @@ class IlloContainer extends Component {
       circlesModel: null,
       currentPalette: null,
       slideshow: true,
+      slideshowDuration: 10,
       maxCircles: 75,
       minCircles: 25,
       repoLink: 'https://github.com/drinkingtheink/circle-generator',
@@ -22,6 +23,8 @@ class IlloContainer extends Component {
     this.generateCircleModel = this.generateCircleModel.bind(this);
     this.updateMaxCirclesCount = this.updateMaxCirclesCount.bind(this);
     this.updateMinCirclesCount = this.updateMinCirclesCount.bind(this);
+    this.startSlideshow = this.startSlideshow.bind(this);
+    this.updateSlideshowDuration = this.updateSlideshowDuration.bind(this);
   }
 
   // for use with slideshow mode
@@ -93,7 +96,12 @@ class IlloContainer extends Component {
     let react = this;
     this.intervalID = setInterval(function() {
         react.generateCircleModel()
-    }, 10 * 1000);
+    }, this.state.slideshowDuration * 1000);
+  }
+
+  updateSlideshowDuration(newCount) {
+    this.setState({ slideshowDuration: newCount });
+    this.generateCircleModel();
   }
 
   endSlideshow() {
@@ -150,6 +158,8 @@ class IlloContainer extends Component {
           updateMinCirclesCount={this.updateMinCirclesCount}
           maxCircles={this.state.maxCircles} 
           updateMaxCirclesCount={this.updateMaxCirclesCount}
+          slideshowDuration={this.state.slideshowDuration}
+          updateSlideshowDuration={this.updateSlideshowDuration}
         />
       </main>     
     )
