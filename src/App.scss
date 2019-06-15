@@ -176,7 +176,8 @@ button {
     background: rgba(black, .25);
     color: white;
     border: none;
-    max-width: 50%;
+    max-width: 40%;
+    margin-right: .25rem;
 
     &:focus {
       background: white;
