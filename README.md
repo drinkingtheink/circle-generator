@@ -1,6 +1,6 @@
 # Circler - Generative Art Using SVGs
 
-![Circler in Action](https://gdurl.com/Z8uc)
+![Circler in Action](https://gdurl.com/I3su)
 
 ## Generative Art
 
@@ -20,9 +20,13 @@
 * Animation delays and durations are also variable
 
 
-## [Create some for yourself.](http://circler.surge.sh/)
+## >> [Create some for yourself.](http://circler.surge.sh/)
 
-## Works Well on Long Screens As Well
+#### An Early Iteration
+
+![Circler in Action](https://gdurl.com/Z8uc)
+
+#### Works Well on Long Screens As Well
 ![Circler in Action on Long Screens](https://gdurl.com/RteF)
 
 ### Roadmap

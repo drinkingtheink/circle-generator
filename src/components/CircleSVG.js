@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CircleSVG = (props) => {
-  const gennedCircleStyles = {
+  const generatedCircleStyles = {
     position: 'absolute',
     width: props.width,
     zIndex: props.z_index,
@@ -18,7 +18,7 @@ const CircleSVG = (props) => {
     animationDelay: props.animationDelay
   }
 
-  const gennedDisplayStyles = {
+  const generatedDisplayStyles = {
     animationName: 'fadeInUp',
     animationDuration: props.displayAnimationDuration,
     animationDelay: props.displayAnimationDelay,
@@ -28,12 +28,12 @@ const CircleSVG = (props) => {
   return (
     <span 
       className="circle-display"
-      style={gennedDisplayStyles}
+      style={generatedDisplayStyles}
     >
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 600 600"
-        style={ gennedCircleStyles }
+        style={generatedCircleStyles}
       >
         <path 
           className="circle-svg-path" 
