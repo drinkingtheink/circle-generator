@@ -11,16 +11,16 @@
 * Set maximum circle count range
 * Adjust slideshow scene duration
 
-
-### [Create some for yourself.](http://circler.surge.sh/)
-
-### Notes About the Generated Circles:
+#### Notes About the Generated Circles:
 * They are absolutely positioned and can align themselves along almost any top or right aligment
 * They have variable z-index settings to provide for stacking visualizations
 * They could be of any opacity (so some may be invisible)
 * They can have a fill, a stroke, or both
 * The stroke is also variable, as is stroke-width and stroke-dasharray
 * Animation delays and durations are also variable
+
+
+## [Create some for yourself.](http://circler.surge.sh/)
 
 ## Works Well on Long Screens As Well
 ![Circler in Action on Long Screens](https://gdurl.com/RteF)
