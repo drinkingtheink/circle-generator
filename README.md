@@ -6,7 +6,11 @@
 
 ### The Circler creates random sets of circles (SVGs) or "circlescapes" that are displayed in a variety of different ways to create new visual landscapes.
 
-#### You can also adjust the circle range to include more or fewer circles in your circlescapes. How many can your browser render at once? Don't get dizzy.
+#### Control from the UI
+* Set minimum circle count range
+* Set maximum circle count range
+* Adjust slideshow scene duration
+
 
 ### [Create some for yourself.](http://circler.surge.sh/)
 
